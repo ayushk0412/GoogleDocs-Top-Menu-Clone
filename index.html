@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <title>Document - Google Docs</title>
 <style>
@@ -93,8 +94,211 @@
                 </div>
             </div>
         </div>
-        <div class="bottom_main"></div>
+        <div class="bottom_main">
+            <div class="first_utility">
+                <ul>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                undo
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                redo
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                print
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                spellcheck
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                format_paint
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="percent">
+                <select name="" id="">
+                    <option value="">100% </option>
+                </select>
+            </div>
+            <div class="text_type">
+                <select name="" id="">
+                    <option value="">Normal Text</option>
+                </select>
+            </div>
+            <div class="font_style">
+                <select name="" id="">
+                    <option value="">Arial </option>
+                </select>
+            </div>
+            <div class="font_size">
+                <div class="number">
+                    <span class="minus">
+                        <span class="material-icons-outlined">
+                            remove
+                        </span>
+                    </span>
+                    <input type="text" value="11" />
+                    <span class="plus">
+                        <span class="material-icons-outlined">
+                            add
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="second_utility">
+                <ul>
+                    <li><a href="">
+                            <span class="material-icons">
+                                format_bold
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                format_italic
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                format_underlined
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                format_color_text
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons">
+                                mode
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="attach">
+                <ul>
+                    <li><a href="">
+                            <span class="material-icons">
+                                insert_link
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                add_comment
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                insert_photo
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="align">
+                <ul>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_align_left
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_align_center
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_align_right
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_align_justify
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="line_height">
+                <ul>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_line_spacing
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="third_utility">
+                <ul>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                checklist
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_list_bulleted
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_list_numbered
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_indent_decrease
+                            </span>
+                        </a></li>
+                    <li><a href="">
+                            <span class="material-icons-outlined">
+                                format_indent_increase
+                            </span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="clear_formatting">
+                <span class="material-icons-outlined">
+                    format_clear
+                </span>
+                <div class="editing">
+                    <select name="" id="">
+                        <option value="">Editing</option>
+                    </select>
+                </div>
+            </div>
+            <div class="top">
+                <span class="material-icons-outlined">
+                    expand_less
+                </span>
+            </div>
+        </div>
     </header>
+    <script>
+        $(document).ready(function () {
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
