@@ -87,6 +87,7 @@ header {
   padding: 2.5px 8px;
   border-radius: 3px;
   font-size: 0.96rem;
+  height: 100%;
 }
 .docs_submenu_main_bottom ul li:hover {
   background-color: var(--hoverPrimary);
@@ -175,17 +176,108 @@ header {
   padding: 7px 20px;
   border-bottom: 1px solid var(--borderPrimary);
 }
-
+.bottom_main span {
+  display: flex;
+  font-size: 1.2rem;
+  color: rgb(100, 100, 100);
+}
 .bottom_main div {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid grey;
+}
+.clear_formatting {
+  width: 235px;
+  display: flex;
+  gap: 3rem;
+}
+.editing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  background-color: #e8edfe;
+  gap: 3rem;
+  padding: 3px 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+.editing,
+.editing span {
+  /* background-color: rgb(173, 209, 221); */
+  color: var(--docsBlue);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.editing p {
+  font-size: 0.85rem;
+}
+
+.drop-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-down span {
+  height: 100%;
+  display: flex;
+  float: left;
+}
+.first_utility {
+  padding-right: 10px;
+  border-right: 1px solid var(--borderPrimary);
+}
+.percent,
+.text_type {
+  padding-left: 10px;
+  padding-right: 7px;
+  border-right: 1px solid var(--borderPrimary);
+}
+.font_style {
+  padding-left: 10px;
+  padding-right: 7px;
+}
+.font_style select {
+  width: 100px;
+}
+.font_size {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+.second_utility {
+  padding-left: 0px;
+  padding-right: 10px;
+  border-right: 1px solid var(--borderPrimary);
+}
+.attach {
+  padding-left: 10px;
+  padding-right: 2px;
+  border-right: 1px solid var(--borderPrimary);
+}
+.align,
+.line_height,
+.third_utility {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid var(--borderPrimary);
+}
+.clear_formatting {
+  padding-left: 0px;
+  padding-right: 0px;
+  border-right: 1px solid var(--borderPrimary);
+}
+.top {
+  padding: 0px 20px;
+  width: 20px;
+}
+.top span:hover {
+  cursor: pointer;
+  background-color: var(--hoverPrimary);
+}
 .bottom_main div ul {
   display: flex;
-  border: 1px solid yellow;
   justify-content: center;
   align-items: center;
   gap: 11px;
@@ -196,15 +288,20 @@ header {
   justify-content: center;
   align-items: center;
 }
-.bottom_main span {
-  font-size: 1.3rem;
-  color: rgb(100, 100, 100);
+.bottom_main div ul li:hover {
+  background-color: var(--hoverPrimary);
 }
 select {
   background-color: #fff;
   border: none;
   color: rgb(100, 100, 100);
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+select:hover {
+  background-color: var(--hoverPrimary);
+  height: 100%;
 }
 .number input {
   width: 40px;
@@ -215,6 +312,9 @@ select {
   color: rgb(82, 82, 82);
   padding: 5px 0px;
 }
+.number input:hover {
+  background-color: var(--hoverPrimary);
+}
 .minus,
 .plus {
   border: 1px solid var(--borderPrimary);
@@ -223,14 +323,18 @@ select {
   cursor: pointer;
 }
 .plus {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .minus {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .minus span,
 .plus span {
   font-size: 1rem;
+}
+.minus:hover,
+.plus:hover {
+  background-color: var(--hoverPrimary);
 }
